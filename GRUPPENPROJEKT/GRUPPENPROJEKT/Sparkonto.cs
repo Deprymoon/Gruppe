@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,7 +16,7 @@ namespace GRUPPENPROJEKT
         {
             // Berechnung der Zinsen (1% des aktuellen Kontostands)
             decimal zinsen = Kontostand * 0.01m; // 1% Zinsen
-            Einzahlen(zinsen); // Zinsen dem Kontostand hinzufügen
+            //Konto.Einzahlen(zinsen); // Zinsen dem Kontostand hinzufügen
         }
 
 
