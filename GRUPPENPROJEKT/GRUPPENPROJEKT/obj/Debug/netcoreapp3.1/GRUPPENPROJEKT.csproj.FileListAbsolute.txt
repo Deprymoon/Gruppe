@@ -1,0 +1,14 @@
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\obj\Debug\netcoreapp3.1\GRUPPENPROJEKT.csproj.AssemblyReference.cache
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\obj\Debug\netcoreapp3.1\GRUPPENPROJEKT.GeneratedMSBuildEditorConfig.editorconfig
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\obj\Debug\netcoreapp3.1\GRUPPENPROJEKT.AssemblyInfoInputs.cache
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\obj\Debug\netcoreapp3.1\GRUPPENPROJEKT.AssemblyInfo.cs
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\obj\Debug\netcoreapp3.1\GRUPPENPROJEKT.csproj.CoreCompileInputs.cache
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\bin\Debug\netcoreapp3.1\GRUPPENPROJEKT.exe
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\bin\Debug\netcoreapp3.1\GRUPPENPROJEKT.deps.json
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\bin\Debug\netcoreapp3.1\GRUPPENPROJEKT.runtimeconfig.json
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\bin\Debug\netcoreapp3.1\GRUPPENPROJEKT.runtimeconfig.dev.json
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\bin\Debug\netcoreapp3.1\GRUPPENPROJEKT.dll
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\bin\Debug\netcoreapp3.1\GRUPPENPROJEKT.pdb
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\obj\Debug\netcoreapp3.1\GRUPPENPROJEKT.dll
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\obj\Debug\netcoreapp3.1\GRUPPENPROJEKT.pdb
+M:\Visual Studio Codes\GRUPPENPROJEKT\GRUPPENPROJEKT\obj\Debug\netcoreapp3.1\GRUPPENPROJEKT.genruntimeconfig.cache
