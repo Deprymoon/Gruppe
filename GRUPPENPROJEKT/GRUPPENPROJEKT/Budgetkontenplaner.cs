@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -45,15 +45,7 @@ namespace GRUPPENPROJEKT
                         Console.Clear();
                         Console.Write("Geben Sie den Betrag für die Einzahlung auf das Girokonto ein: ");
                         decimal einzahlungsBetragGiro = Convert.ToDecimal(Console.ReadLine());
-                        if (einzahlungsBetragGiro > 0)
-                        {
-                            giroKontostand += einzahlungsBetragGiro;
-                            Console.WriteLine($"Einzahlung von {einzahlungsBetragGiro:C} erfolgreich. Neuer Kontostand: {giroKontostand:C}");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Der Betrag muss positiv sein.");
-                        }
+                        giroKontostand = Konto.Einzahlen(einzahlungsBetragGiro, giroKontostand);
                         Thread.Sleep(2000); // 2 Sekunden warten
                         break;
 
@@ -61,15 +53,7 @@ namespace GRUPPENPROJEKT
                         Console.Clear();
                         Console.Write("Geben Sie den Betrag für die Abhebung vom Girokonto ein: ");
                         decimal abhebungsBetragGiro = Convert.ToDecimal(Console.ReadLine());
-                        if (abhebungsBetragGiro > 0 && abhebungsBetragGiro <= giroKontostand)
-                        {
-                            giroKontostand -= abhebungsBetragGiro;
-                            Console.WriteLine($"Abhebung von {abhebungsBetragGiro:C} erfolgreich. Neuer Kontostand: {giroKontostand:C}");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Abhebung nicht möglich. Überprüfen Sie den Betrag.");
-                        }
+                        giroKontostand = Konto.Abheben(abhebungsBetragGiro, giroKontostand);
                         Thread.Sleep(2000); // 2 Sekunden warten
                         break;
 
@@ -77,15 +61,7 @@ namespace GRUPPENPROJEKT
                         Console.Clear();
                         Console.Write("Geben Sie den Betrag für die Einzahlung auf das Sparkonto ein: ");
                         decimal einzahlungsBetragSpar = Convert.ToDecimal(Console.ReadLine());
-                        if (einzahlungsBetragSpar > 0)
-                        {
-                            sparKontostand += einzahlungsBetragSpar;
-                            Console.WriteLine($"Einzahlung von {einzahlungsBetragSpar:C} erfolgreich. Neuer Kontostand: {sparKontostand:C}");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Der Betrag muss positiv sein.");
-                        }
+                        sparKontostand = Konto.Einzahlen(einzahlungsBetragSpar, sparKontostand);
                         Thread.Sleep(2000); // 2 Sekunden warten
                         break;
 
@@ -93,15 +69,7 @@ namespace GRUPPENPROJEKT
                         Console.Clear();
                         Console.Write("Geben Sie den Betrag für die Abhebung vom Sparkonto ein: ");
                         decimal abhebungsBetragSpar = Convert.ToDecimal(Console.ReadLine());
-                        if (abhebungsBetragSpar > 0 && abhebungsBetragSpar <= sparKontostand)
-                        {
-                            sparKontostand -= abhebungsBetragSpar;
-                            Console.WriteLine($"Abhebung von {abhebungsBetragSpar:C} erfolgreich. Neuer Kontostand: {sparKontostand:C}");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Abhebung nicht möglich. Überprüfen Sie den Betrag.");
-                        }
+                        sparKontostand = Konto.Abheben(abhebungsBetragSpar, sparKontostand);
                         Thread.Sleep(2000); // 2 Sekunden warten
                         break;
 
