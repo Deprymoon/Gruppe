@@ -7,9 +7,9 @@ namespace GRUPPENPROJEKT
 
     public class Konto
     {
-        public string Kontonummer { get; private set; }
-        public static decimal Kontostand { get; set;}
-        public string Inhaber { get; private set; }
+        public string Kontonummer { get;  set; }
+        public static decimal Kontostand { get; set; }
+        public string Inhaber { get; set; }
 
         public Konto(string kontonummer, string inhaber)
         {
@@ -23,7 +23,7 @@ namespace GRUPPENPROJEKT
             if (betrag > 0)
             {
                 Kontostand += betrag; // Betrag zum Kontostand hinzufügen
-                Console.WriteLine("Einzahlung von "+ betrag +" erfolgreich. Neuer Kontostand: "+Kontostand+ "");
+                Console.WriteLine("Einzahlung von " + betrag + " erfolgreich. Neuer Kontostand: " + Kontostand + "");
             }
             else
             {
