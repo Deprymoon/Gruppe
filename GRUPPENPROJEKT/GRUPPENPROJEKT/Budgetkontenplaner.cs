@@ -32,6 +32,7 @@ namespace GRUPPENPROJEKT
             {
                 Console.Clear(); // Bildschirm löschen
                 Console.WriteLine("Willkommen im Bankensystem!");
+                Console.WriteLine("");
                 Console.WriteLine("\nWählen Sie eine Option:");
                 Console.WriteLine("1. Einzahlung auf Girokonto");
                 Console.WriteLine("2. Abhebung vom Girokonto");
