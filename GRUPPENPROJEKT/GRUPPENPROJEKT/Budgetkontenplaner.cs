@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 
 namespace GRUPPENPROJEKT
@@ -36,6 +35,7 @@ namespace GRUPPENPROJEKT
                 Console.WriteLine("5. Zinsen gutschreiben auf Sparkonto (1%)");
                 Console.WriteLine("6. Kontostand anzeigen");
                 Console.WriteLine("7. Beenden");
+                Console.WriteLine("Datum");
                 Console.Write("Ihre Wahl: ");
                 string wahl = Console.ReadLine();
 
@@ -91,6 +91,39 @@ namespace GRUPPENPROJEKT
                         Console.Clear();
                         Console.WriteLine("Programm wird beendet.");
                         return; // Beendet die Anwendung
+
+                        case "8":
+                        Console.Clear();
+                        int Tag = 1;
+                        int Monat = 1;
+                        int Jahr = 2025;
+                        Console.WriteLine("Heute haben wir den " + Tag + ". " + Monat + ". " + Jahr);
+                        Console.WriteLine("Wollen sie den Tag beenden? (j/n)");
+                        switch (Console.ReadLine())
+                        {
+                            case "j":
+                                Tag += 1;
+                                if (Tag > 31)
+                                {
+                                    Tag = 1;
+                                    Monat += 1;
+                                    if (Monat > 12)
+                                    {
+                                        Monat = 1;
+                                        Jahr += 1;
+                                    }
+                                }
+                                break;
+                    
+                            case "n":
+                                break;
+                            default:
+                                Console.Clear();
+                                Console.WriteLine("Ungültige Auswahl. Bitte versuchen Sie es erneut.");
+                                Thread.Sleep(2000); // 2 Sekunden warten
+                                break;
+                        }
+                        break;
 
                     default:
                         Console.Clear();
