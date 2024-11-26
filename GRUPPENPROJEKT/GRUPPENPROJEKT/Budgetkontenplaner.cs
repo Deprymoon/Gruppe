@@ -12,7 +12,7 @@ namespace GRUPPENPROJEKT
             int Tag = 1;
             int Monat = 1;
             int Jahr = 2025;
-            
+
             // Erstellen eines Girokontos
             Console.WriteLine("Geben Sie die Kontonummer für das Girokonto ein:");
             string giroKontoNummer = Console.ReadLine();
@@ -32,7 +32,6 @@ namespace GRUPPENPROJEKT
             {
                 Console.Clear(); // Bildschirm löschen
                 Console.WriteLine("Willkommen im Bankensystem!");
-                Console.WriteLine("");
                 Console.WriteLine("\nWählen Sie eine Option:");
                 Console.WriteLine("1. Einzahlung auf Girokonto");
                 Console.WriteLine("2. Abhebung vom Girokonto");
@@ -98,36 +97,13 @@ namespace GRUPPENPROJEKT
                         Console.WriteLine("Programm wird beendet.");
                         return; // Beendet die Anwendung
 
-                        case "8":
+                    case "8":
                         Console.Clear();
-                       
-                        Console.WriteLine("Heute haben wir den " + Tag + ". " + Monat + ". " + Jahr);
-                        Console.WriteLine("Wollen sie den Tag beenden? (j/n)");
-                        switch (Console.ReadLine())
-                        {
-                            case "j":
-                                Tag += 1;
-                                if (Tag > 31)
-                                {
-                                    Tag = 1;
-                                    Monat += 1;
-                                    if (Monat > 12)
-                                    {
-                                        Monat = 1;
-                                        Jahr += 1;
-                                    }
-                                }
-                                break;
-                    
-                            case "n":
-                                break;
-                            default:
-                                Console.Clear();
-                                Console.WriteLine("Ungültige Auswahl. Bitte versuchen Sie es erneut.");
-                                Thread.Sleep(2000); // 2 Sekunden warten
-                                break;
-                        }
+
+                        BeendenTag();
                         break;
+
+
 
                     default:
                         Console.Clear();
@@ -136,7 +112,73 @@ namespace GRUPPENPROJEKT
                         break;
                 }
             }
+
+
+
+
+            void BeendenTag()
+            {
+                Console.WriteLine("Heute haben wir den " + Tag + ". " + Monat + ". " + Jahr);
+                Console.WriteLine("Wollen sie den Tag beenden? (j/n)");
+                Console.WriteLine("Oder möchten sie direkt einen Monat überspringen? (m)");
+                switch (Console.ReadLine())
+                {
+                    case "j":
+                        Tag += 1;
+                        Console.Clear();
+                        Console.WriteLine("Heute haben wir den " + Tag + ". " + Monat + ". " + Jahr);
+                        Thread.Sleep(2000); // 2 Sekunden warten
+                        
+                        if (Tag > 30)
+                        {
+                            Tag = 1;
+                            Monat += 1;
+                            if (Monat > 12)
+                            {
+                                Monat = 1;
+                                Jahr += 1;
+                            }
+                            // Zinsen dazubekommen
+                            sparKontostand *= 1.01m;
+                            Console.Clear();
+                            Console.WriteLine("Heute haben wir den " + Tag + ". " + Monat + ". " + Jahr);
+                            Console.WriteLine();
+                            Console.WriteLine("Zinsen wurden gutschrieben. Neuer SparKontostand: " + sparKontostand);
+                            Thread.Sleep(2000); // 2 Sekunden warten
+
+                        }
+                        break;
+
+                    case "m":
+                        Monat += 1;
+                        if (Monat > 12)
+                        {
+                            Monat = 1;
+                            Jahr += 1;
+                        }
+                        // Zinsen dazubekommen
+                        sparKontostand *= 1.01m;
+                        Console.Clear();
+                        Console.WriteLine("Heute haben wir den " + Tag + ". " + Monat + ". " + Jahr);
+                        Console.WriteLine();
+                        Console.WriteLine("Zinsen wurden gutschrieben. Neuer SparKontostand: " + sparKontostand);
+                        Thread.Sleep(2000); // 2 Sekunden warten
+                        break;
+
+                    case "n":
+                        break;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Ungültige Auswahl. Bitte versuchen Sie es erneut.");
+                        Thread.Sleep(2000); // 2 Sekunden warten
+                        break;
+                }
+            }
+
+
+
+
+        
         }
     }
 }
-
