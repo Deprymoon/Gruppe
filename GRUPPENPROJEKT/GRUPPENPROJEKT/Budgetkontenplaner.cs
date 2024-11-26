@@ -8,6 +8,11 @@ namespace GRUPPENPROJEKT
     {
         static void Main(string[] args)
         {
+
+            int Tag = 1;
+            int Monat = 1;
+            int Jahr = 2025;
+            
             // Erstellen eines Girokontos
             Console.WriteLine("Geben Sie die Kontonummer für das Girokonto ein:");
             string giroKontoNummer = Console.ReadLine();
@@ -94,9 +99,7 @@ namespace GRUPPENPROJEKT
 
                         case "8":
                         Console.Clear();
-                        int Tag = 1;
-                        int Monat = 1;
-                        int Jahr = 2025;
+                       
                         Console.WriteLine("Heute haben wir den " + Tag + ". " + Monat + ". " + Jahr);
                         Console.WriteLine("Wollen sie den Tag beenden? (j/n)");
                         switch (Console.ReadLine())
