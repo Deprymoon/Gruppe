@@ -32,7 +32,8 @@ namespace GRUPPENPROJEKT
             {
                 Console.Clear(); // Bildschirm löschen
                 Console.WriteLine("Willkommen im Bankensystem!");
-                Console.WriteLine("\nWählen Sie eine Option:");
+                Console.WriteLine("");
+                Console.WriteLine("Wählen Sie eine Option:");
                 Console.WriteLine("1. Einzahlung auf Girokonto");
                 Console.WriteLine("2. Abhebung vom Girokonto");
                 Console.WriteLine("3. Einzahlung auf Sparkonto");
@@ -40,7 +41,7 @@ namespace GRUPPENPROJEKT
                 Console.WriteLine("5. Zinsen gutschreiben auf Sparkonto (1%)");
                 Console.WriteLine("6. Kontostand anzeigen");
                 Console.WriteLine("7. Beenden");
-                Console.WriteLine("Datum");
+                Console.WriteLine("8. Datum");
                 Console.Write("Ihre Wahl: ");
                 string wahl = Console.ReadLine();
 
@@ -81,14 +82,14 @@ namespace GRUPPENPROJEKT
                     case "5":
                         Console.Clear();
                         sparKontostand *= 1.01m; // Zinsen gutschreiben
-                        Console.WriteLine($"Zinsen wurden gutschrieben. Neuer Kontostand: {sparKontostand:C}");
+                        Console.WriteLine("Zinsen wurden gutschrieben. Neuer Kontostand: "+sparKontostand+"");
                         Thread.Sleep(2000); // 2 Sekunden warten
                         break;
 
-                    case "6":
+                     case "6":
                         Console.Clear();
-                        Console.WriteLine($"Girokonto Kontostand: {giroKontostand:C}");
-                        Console.WriteLine($"Sparkonto Kontostand: {sparKontostand:C}");
+                        Console.WriteLine("Girokonto Kontostand: "+giroKontostand+"");
+                        Console.WriteLine("Sparkonto Kontostand: "+sparKontostand+"");
                         Thread.Sleep(2000); // 2 Sekunden warten
                         break;
 
